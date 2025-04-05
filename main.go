@@ -20,3 +20,5 @@ func changeUsingPointer(s *string){
 	newValue := "Red"
 	*s = newValue
 }
+
+// pointer is , it points to a spesific location in memory and gives you a means of getting that particular location in memory
