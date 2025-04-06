@@ -4,7 +4,7 @@ import (
 
 	"log"
 )
-
+// also fmt can be used too instead of log, its a valid approach also when it comes to console.log
 func main() {
 	var myString string
 	myString = "Green"
