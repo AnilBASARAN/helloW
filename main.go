@@ -17,6 +17,7 @@ func main() {
 }
 
 func changeUsingPointer(s *string){
+	// this is a different way than usual,  ":=" this is declaring and equaling to the variable at the same time
 	newValue := "Red"
 	*s = newValue
 }
