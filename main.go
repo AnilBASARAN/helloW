@@ -10,13 +10,14 @@ var s = "seven"
 // also fmt can be used too instead of log, its a valid approach also when it comes to console.log
 func main() {
 
-	var firstName string
-	var lastName string
-	var phoneNumber string
-	var age int
-	var birthDate time.Time
 
-	type User struct 
+	type User struct {
+		FirstName string
+		LastName string
+		PhoneNumber string
+		Age int
+		BirthDate time.Time
+	}
 }
 
 func saySomething(s string) (string,string) {
