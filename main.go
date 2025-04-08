@@ -24,5 +24,9 @@ log.Println(user.FirstName)
 // use user field FirstName by using dot notation
 	
 }
+// go doesnt have private, and public, if starts with capital letter, its accessible, else its just visible on that package 
+func whatever(){
+//this is just available on this package
+}
 
 
