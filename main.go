@@ -1,12 +1,16 @@
 package main
 
-import (
+import "log"
 
-)
+
+var s = "seven"
 // also fmt can be used too instead of log, its a valid approach also when it comes to console.log
 func main() {
+var s2 = "six"
 
-
+log.Println("m is",s)
+log.Println("s2 is",s2)
+log.Println(saySomething("xxx"))
 }
 
 func saySomething(s string) (string,string) {
