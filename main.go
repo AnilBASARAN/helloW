@@ -5,23 +5,24 @@ import (
 	"time"
 )
 
+type User struct {
+	FirstName string
+	LastName string
+	PhoneNumber string
+	Age int
+	BirthDate time.Time
+}
 
-var s = "seven"
-// also fmt can be used too instead of log, its a valid approach also when it comes to console.log
 func main() {
 
-
-	type User struct {
-		FirstName string
-		LastName string
-		PhoneNumber string
-		Age int
-		BirthDate time.Time
-	}
+user := User {
+	FirstName: "Max",
+	LastName: "Payne",
 }
 
-func saySomething(s string) (string,string) {
-	return s, "World"
+log.Println(user.FirstName)
+// use user field FirstName by using dot notation
+	
 }
 
-// pointer is , it points to a spesific location in memory and gives you a means of getting that particular location in memory
+
