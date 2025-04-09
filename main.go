@@ -1,32 +1,27 @@
 package main
 
 import (
-	"log"
-	"time"
+	"fmt"
+	"net/http"
 )
 
-type User struct {
+type myStruct struct {
 	FirstName string
-	LastName string
-	PhoneNumber string
-	Age int
-	BirthDate time.Time
 }
 
 func main() {
 
-user := User {
-	FirstName: "Max",
-	LastName: "Payne",
+	http.HandleFunc("/",func(w http.ResponseWriter, r *http.Request){
+		n, err := fmt.Fprintf(w, "hello world")
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(fmt.Sprintf("Number of Bytes written: %d ", n ))
+	})
+
+	_ = http.ListenAndServe(":8080",nil)
 }
 
-log.Println(user.FirstName)
-// use user field FirstName by using dot notation
-	
-}
-// go doesnt have private, and public, if starts with capital letter, its accessible, else its just visible on that package 
-func whatever(){
-//this is just available on this package
-}
+
 
 
