@@ -1,9 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"net/http"
-
 )
 
 const portNumber = ":8080"
@@ -33,6 +33,10 @@ func Divide(w http.ResponseWriter, r *http.Request) {
 }
 
 func divideValues(x,y float32) (float32 , error){
+	if y <= 0 {
+		err := errors.New("can not divided by zero")
+		return 0, err
+	}
 	result := x /y
 	return result, nil
 }
