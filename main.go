@@ -27,6 +27,10 @@ func addValues(x,y int ) int {
 	return x + y
 }
 
+func Divide(w http.ResponseWriter, r *http.Request) {
+	
+}
+
 func main() {
 
 	http.HandleFunc("/",Home)
