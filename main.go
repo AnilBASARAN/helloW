@@ -3,23 +3,17 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"text/template"
 )
 
 const portNumber = ":8080"
 
 func Home(w http.ResponseWriter, r * http.Request){
-		n, err := fmt.Fprintf(w, "This is the Home Page")
-		if err != nil {
-			fmt.Println(err)
-		}
-		fmt.Println(fmt.Sprintf("Number of Bytes written: %d ", n ))
+	renderTemplate(w, "home.page.tmpl")
 	
 }
 func About(w http.ResponseWriter, r * http.Request){
-	sum := addValues(2,2)
-
-	_, _ = fmt.Fprintf(w, fmt.Sprintf("This is the about page and 2 + 2 is %d", sum ))
-
+	renderTemplate(w, "about.page.tmpl")
 }
 
 
@@ -33,6 +27,14 @@ func main() {
 	_ = http.ListenAndServe(portNumber,nil)
 }
 
+func renderTemplate(w http.ResponseWriter, tmpl string){
+	parsedTemplate, _ := template.ParseFiles("./templates/" + tmpl)
+	err := parsedTemplate.Execute(w,nil)
+	if err != nil {
+		fmt.Println("error parsing template:",err)
+		return
+	}
+}
 
 
 
