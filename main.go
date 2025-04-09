@@ -28,6 +28,10 @@ func addValues(x,y int ) int {
 }
 
 func Divide(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func divideValues(x,y float32){
 	
 }
 
