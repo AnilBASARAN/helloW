@@ -23,6 +23,8 @@ func main() {
 
 // if you use go run *go instead of go run main.go
 // because if you try go main.go it will say ı dont know what Home is and what About is
+// instead of compiling just main.go, which is go run main.go does, you want to compile all of the files which 
+// you can achieve with * (Asterix)
 
 
 
