@@ -21,7 +21,7 @@ func main() {
 	_ = http.ListenAndServe(portNumber,nil)
 }
 
-
+// if you use go run *go instead of go run main.go
 
 
 
