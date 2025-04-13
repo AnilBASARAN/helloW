@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"myapp/pkg/handlers"
 	"net/http"
-	"myapp/handlers"
 )
 
 const portNumber = ":8080"
@@ -26,5 +26,5 @@ func main() {
 // instead of compiling just main.go, which is go run main.go does, you want to compile all of the files which 
 // you can achieve with * (Asterix)
 
-
+// TODO to run it use => go run cmd/web/*.go
 
