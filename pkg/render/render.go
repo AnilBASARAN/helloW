@@ -26,3 +26,5 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 		return
 	}
 }
+
+//lets consider an alternative approach
